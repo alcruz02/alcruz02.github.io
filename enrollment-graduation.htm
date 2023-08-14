@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Enrollment and Graduation Statistics</title>
+    <style>
+        body {
+            background-image: url("bg5.jpg");
+            background-size: cover;
+            color: black;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Enrollment and Graduation Statistics</h2>
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Academic Year</th>
+                    <th>FT Undergraduate Enrollment</th>
+                    <th>PT Undergraduate Enrollment</th>
+                    <th>Total Undergraduate Enrollment</th>
+                    <th>FT Graduate Enrollment</th>
+                    <th>PT Graduate Enrollment</th>
+                    <th>Total Graduate Enrollment</th>
+                    <th>Total Enrollment</th>
+                    <th>Total Degrees Awarded</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2010-2011</td>
+                    <td>818</td>
+                    <td>699</td>
+                    <td>1517</td>
+                    <td>73</td>
+                    <td>154</td>
+                    <td>227</td>
+                    <td>1744</td>
+                    <td>497</td>
+                </tr>
+                <tr>
+                    <td>2011-2012</td>
+                    <td>829</td>
+                    <td>686</td>
+                    <td>1515</td>
+                    <td>50</td>
+                    <td>168</td>
+                    <td>218</td>
+                    <td>1733</td>
+                    <td>489</td>
+                </tr>
+                <tr>
+                    <td>2012-2013</td>
+                    <td>713</td>
+                    <td>660</td>
+                    <td>1373</td>
+                    <td>37</td>
+                    <td>157</td>
+                    <td>194</td>
+                    <td>1567</td>
+                    <td>546</td>
+                </tr>
+                <tr>
+                    <td>2013-2014</td>
+                    <td>829</td>
+                    <td>686</td>
+                    <td>1515</td>
+                    <td>42</td>
+                    <td>164</td>
+                    <td>206</td>
+                    <td>1721</td>
+                    <td>522</td>
+                </tr>
+                <tr>
+                    <td>2014-2015</td>
+                    <td>647</td>
+                    <td>807</td>
+                    <td>1454</td>
+                    <td>53</td>
+                    <td>194</td>
+                    <td>247</td>
+                    <td>1701</td>
+                    <td>669</td>
+                </tr>
+                <tr>
+                    <td>2015-2016</td>
+                    <td>615</td>
+                    <td>645</td>
+                    <td>1260</td>
+                    <td>63</td>
+                    <td>224</td>
+                    <td>287</td>
+                    <td>1547</td>
+                    <td>419</td>
+                </tr>
+                <tr>
+                    <td>2016-2017</td>
+                    <td>195</td>
+                    <td>599</td>
+                    <td>794</td>
+                    <td>64</td>
+                    <td>64</td>
+                    <td>128</td>
+                    <td>922</td>
+                    <td>497</td>
+                </tr>
+                <tr>
+                    <td>2017-2018 (T3)</td>
+                    <td>36</td>
+                    <td>90</td>
+                    <td>126</td>
+                    <td>234</td>
+                    <td>10</td>
+                    <td>244</td>
+                    <td>370</td>
+                    <td>576</td>
+                </tr>
+                <tr>
+                    <td>2018-2019 (T1)</td>
+                    <td>332</td>
+                    <td>298</td>
+                    <td>630</td>
+                    <td>360</td>
+                    <td>1</td>
+                    <td>361</td>
+                    <td>991</td>
+                    <td>na</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mt-4">
+            <canvas id="enrollmentGraduationChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Data for the chart
+        var academicYears = ['2010-2011', '2011-2012', '2012-2013', '2013-2014', '2014-2015', '2015-2016', '2016-2017', '2017-2018 (T3)', '2018-2019 (T1)'];
+        var ftUndergradEnrollment = [818, 829, 713, 829, 647, 615, 195, 36, 332];
+        var ptUndergradEnrollment = [699, 686, 660, 686, 807, 645, 599, 90, 298];
+        var totalUndergradEnrollment = [1517, 1515, 1373, 1515, 1454, 1260, 794, 126, 630];
+        var ftGradEnrollment = [73, 50, 37, 42, 53, 63, 64, 234, 360];
+        var ptGradEnrollment = [154, 168, 157, 164, 194, 224, 64, 10, 1];
+        var totalGradEnrollment = [227, 218, 194, 206, 247, 287, 128, 244, 361];
+        var totalDegreesAwarded = [497, 489, 546, 522, 669, 419, 497, 576, null]; // null for missing data "na"
+
+        // Create the chart
+        var ctx = document.getElementById('enrollmentGraduationChart').getContext('2d');
+        var enrollmentGraduationChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: academicYears,
+                datasets: [{
+                    label: 'FT Undergrad Enrollment',
+                    data: ftUndergradEnrollment,
+                    borderColor: 'blue',
+                    fill: false
+                }, {
+                    label: 'PT Undergrad Enrollment',
+                    data: ptUndergradEnrollment,
+                    borderColor: 'red',
+                    fill: false
+                }, {
+                    label: 'Total Undergrad Enrollment',
+                    data: totalUndergradEnrollment,
+                    borderColor: 'green',
+                    fill: false
+                }, {
+                    label: 'FT Grad Enrollment',
+                    data: ftGradEnrollment,
+                    borderColor: 'purple',
+                    fill: false
+                }, {
+                    label: 'PT Grad Enrollment',
+                    data: ptGradEnrollment,
+                    borderColor: 'orange',
+                    fill: false
+                }, {
+                    label: 'Total Grad Enrollment',
+                    data: totalGradEnrollment,
+                    borderColor: 'brown',
+                    fill: false
+                }, {
+                    label: 'Total Degrees Awarded',
+                    data: totalDegreesAwarded,
+                    borderColor: 'black',
+                    borderDash: [5, 5],
+                    fill: false
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Enrollment and Graduation Statistics',
+                    fontSize: 16
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

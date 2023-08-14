@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>DLSU Manila - Degree Programs</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("bg5.jpg");
+            background-size: cover;
+            color: black; /* Set font color to black */
+        }
+
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* White background with opacity for the content */
+            height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Style for the dropdown items */
+        .dropdown-toggle {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* Style for the expanded courses */
+        .expanded-courses {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+
+        /* Style for the table */
+        table {
+            background-color: white; /* Set the background of the table to white */
+            color: black; /* Set font color to black within the table */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to De La Salle University Manila</h1>
+        <p>At DLSU Manila, we offer a wide range of degree programs that will suit your needs and passion. Whether you're interested in the fields of computer science, education, liberal arts, science, engineering, business, or economics, we have diverse programs to help you achieve your academic and career goals.</p>
+
+        <h2>Explore our Colleges and Degree Programs:</h2>
+        <ul class="list-unstyled">
+            <li>
+                <span class="dropdown-toggle" id="collegeComputerStudies">College of Computer Studies</span>
+                <ul id="collegeComputerStudiesCourses" class="expanded-courses">
+                    <li>Bachelor of Science in Computer Science Major in Software Technology</li>
+                    <li>Bachelor of Science in Computer Science Major in Network and Information Security</li>
+                    <li>Bachelor of Science in Computer Science, Major in Computer Systems Engineering</li>
+                    <!-- Add more courses as needed -->
+                </ul>
+            </li>
+            <li>
+                <span class="dropdown-toggle" id="collegeEducation">Br. Andrew Gonzalez College of Education</span>
+                <ul id="collegeEducationCourses" class="expanded-courses">
+                    <li>Bachelor of Early Childhood Education</li>
+                    <li>Bachelor of Secondary Education Major in English</li>
+                    <li>Bachelor of Secondary Education Major in Science with specialization in Biology</li>
+                    <!-- Add more courses as needed -->
+                </ul>
+            </li>
+            <!-- Add more colleges and courses as needed -->
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleCourses(collegeId) {
+            var collegeElement = document.getElementById(collegeId);
+            var coursesElement = document.getElementById(collegeId + "Courses");
+            coursesElement.classList.toggle("show");
+        }
+
+        document.getElementById("collegeComputerStudies").addEventListener("click", function() {
+            toggleCourses("collegeComputerStudies");
+        });
+        document.getElementById("collegeEducation").addEventListener("click", function() {
+            toggleCourses("collegeEducation");
+        });
+        // Add event listeners for other colleges
+    </script>
+</body>
+</html>

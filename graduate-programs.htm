@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Graduate Programs</title>
+    <style>
+        body {
+            background-image: url("bg5.jpg");
+            background-size: cover;
+            color: black; /* Set font color to black */
+        }
+
+        /* Style for the white box */
+        .white-box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px; /* Adjust this value to control the width of the white box */
+            border-radius: 10px;
+        }
+
+        /* Style for the dropdown items */
+        .dropdown-toggle {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* Style for the expanded programs */
+        .expanded-programs {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+
+        /* Style for the table */
+        table {
+            background-color: white; /* Set the background of the table to white */
+            color: black; /* Set font color to black within the table */
+        }
+    </style>
+</head>
+<body>
+    <div class="white-box">
+        <h1 class="text-center">Graduate Programs</h1>
+
+        <!-- Br. Andrew Gonzalez College of Education -->
+        <h2 class="text-center">Br. Andrew Gonzalez College of Education</h2>
+        <ul class="list-unstyled">
+            <li id="doctoralCounselingPsych" class="dropdown-toggle">Department of Counseling and Educational Psychology - Doctoral Degree Programs</li>
+            <div id="doctoralCounselingPsychPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Doctor of Philosophy in Educational Psychology</li>
+                    <li>Doctor of Philosophy in Counseling Psychology, with specialization in Clinical, School or Industrial Counseling</li>
+                </ul>
+            </div>
+
+            <li id="doctoralLeadershipMgmt" class="dropdown-toggle">Department of Educational and Leadership Management - Doctoral Degree Programs</li>
+            <div id="doctoralLeadershipMgmtPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Doctor of Philosophy in Education, major in Educational Leadership and Management (Regular Program)</li>
+                    <li>Doctor of Philosophy in Education, major in Educational Leadership and Management (Executive Program)</li>
+                </ul>
+            </div>
+
+            <li id="doctoralAppliedLinguistics" class="dropdown-toggle">Department of English and Applied Linguistics - Doctoral Degree Programs</li>
+            <div id="doctoralAppliedLinguisticsPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Doctor of Philosophy in Applied Linguistics (Regular Program)</li>
+                    <li>Doctor of Philosophy in Applied Linguistics (Straight Program)</li>
+                </ul>
+            </div>
+
+            <li id="doctoralScienceEducation" class="dropdown-toggle">Department of Science Education - Doctoral Degree Programs</li>
+            <div id="doctoralScienceEducationPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Doctor of Philosophy in Science Education, with specialization in Biology, Chemistry, Mathematics or Physics</li>
+                </ul>
+            </div>
+        </ul>
+
+        <!-- Ramon V. del Rosario College of Business -->
+        <h2 class="text-center">Ramon V. del Rosario College of Business</h2>
+        <ul class="list-unstyled">
+            <li id="doctoralBusiness" class="dropdown-toggle">Doctoral Degree Programs</li>
+            <div id="doctoralBusinessPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Doctor of Philosophy in Business (PHDBUS)</li>
+                </ul>
+            </div>
+
+            <li id="masterBusiness" class="dropdown-toggle">Master's Degree Programs</li>
+            <div id="masterBusinessPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Master of Science in Computational Finance (MSCF)</li>
+                    <li>Master in Risk and Insurance Management</li>
+                    <li>Master of Marketing Communications</li>
+                    <li>Master of Science in Accountancy</li>
+                    <li>Master of Science in Entrepreneurship</li>
+                    <li>Master of Science in Marketing and Diploma in Marketing</li>
+                    <li>Master of Science in Financial Engineering</li>
+                    <li>Master of Science in Industrial Relations Management</li>
+                    <li>Master of Science in Industrial Relations Management and Diploma in Industrial Relations Management</li>
+                </ul>
+            </div>
+        </ul>
+
+        <!-- College of Computer Studies -->
+        <h2 class="text-center">College of Computer Studies</h2>
+        <ul class="list-unstyled">
+            <li id="doctoralIT" class="dropdown-toggle">Doctoral Degree Programs</li>
+            <div id="doctoralITPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Doctor in Information Technology (DIT)</li>
+                    <li>Doctor of Philosophy in Computer Science (PhDCS)</li>
+                </ul>
+            </div>
+
+            <li id="masterIT" class="dropdown-toggle">Master's Degree Programs</li>
+            <div id="masterITPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Master of Science in Computer Science (MSCS)</li>
+                    <li>Master of Science in Information Technology (MSIT)</li>
+                    <li>Master in Information Technology (MIT)</li>
+                    <li>Master in Information Security (MINFSEC)</li>
+                </ul>
+            </div>
+        </ul>
+
+        <!-- College of Liberal Arts -->
+        <h2 class="text-center">College of Liberal Arts</h2>
+        <ul class="list-unstyled">
+            <li id="doctoralLiberalArts" class="dropdown-toggle">Doctoral Degree Programs</li>
+            <div id="doctoralLiberalArtsPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Doctor of Philosophy in Political Science</li>
+                    <li>Doctor of Education Major in Religious and Values Education</li>
+                    <li>Doctor of Philosophy in Applied Theology (DAPT)</li>
+                    <li>Straight Program: Master of Arts in Applied Theology with Specialization in Formative Counseling and Spiritual Accompaniment and Doctor of Philosophy in Applied Theology with Specialization in Formative Counseling and Spiritual Accompaniment (DAPT-FCSA)</li>
+                    <li>Straight Program – Master of Arts in Applied Theology with Specialization in Religious and Values Education and Doctor of Philosophy in Applied Theology Major in Religious and Values Education (DAPT-SRVE)</li>
+                    <li>Doctor of Philosophy in Development Studies</li>
+                    <li>Doctor of Philosophy in Literature</li>
+                    <li>Doctor of Philosophy in Philosophy</li>
+                    <li>Straight Program—Master in Teaching Philosophy and Doctor of Philosophy in Philosophy</li>
+                    <li>Doctor of Philosophy in Philippine Studies – Language, Culture and Media (PHARFIL)</li>
+                    <li>Doctor of Philosophy in Psychology</li>
+                    <li>Doctor of Philosophy in Sociology (PHDSOC)</li>
+                    <li>Doctor of Philosophy in History – Academic Track (DHIS)</li>
+                    <li>Doctor of Philosophy in History By Research (DHISRES)</li>
+                </ul>
+            </div>
+        </ul>
+
+        <!-- Gokongwei College of Engineering -->
+        <h2 class="text-center">Gokongwei College of Engineering</h2>
+        <ul class="list-unstyled">
+            <li id="graduateEngineering" class="dropdown-toggle">Graduate Degree Programs</li>
+            <div id="graduateEngineeringPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Chemical Engineering</li>
+                    <li>Civil Engineering</li>
+                    <li>Electronics and Computer Engineering</li>
+                    <ul class="list-unstyled expanded-programs">
+                        <li>Electronics Engineering</li>
+                        <li>Computer Engineering</li>
+                    </ul>
+                    <li>Industrial and Systems Engineering</li>
+                    <li>Manufacturing Engineering and Management</li>
+                    <li>Mechanical Engineering</li>
+                </ul>
+            </div>
+        </ul>
+
+        <!-- School of Economics -->
+        <h2 class="text-center">School of Economics</h2>
+        <ul class="list-unstyled">
+            <li id="graduateEconomics" class="dropdown-toggle">Graduate Degree Programs</li>
+            <div id="graduateEconomicsPrograms" class="collapse pl-3">
+                <ul class="list-unstyled expanded-programs">
+                    <li>Diploma in Development Economics</li>
+                    <li>Master in Applied Economics</li>
+                    <li>Master of Science in Economics</li>
+                    <li>Doctor of Philosophy in Economics</li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function togglePrograms(programId) {
+            var programElement = document.getElementById(programId);
+            var programsElement = document.getElementById(programId + "Programs");
+            programsElement.classList.toggle("show");
+        }
+
+        document.getElementById("doctoralCounselingPsych").addEventListener("click", function() {
+            togglePrograms("doctoralCounselingPsych");
+        });
+        document.getElementById("doctoralLeadershipMgmt").addEventListener("click", function() {
+            togglePrograms("doctoralLeadershipMgmt");
+        });
+        document.getElementById("doctoralAppliedLinguistics").addEventListener("click", function() {
+            togglePrograms("doctoralAppliedLinguistics");
+        });
+        document.getElementById("doctoralScienceEducation").addEventListener("click", function() {
+            togglePrograms("doctoralScienceEducation");
+        });
+        document.getElementById("doctoralBusiness").addEventListener("click", function() {
+            togglePrograms("doctoralBusiness");
+        });
+        document.getElementById("masterBusiness").addEventListener("click", function() {
+            togglePrograms("masterBusiness");
+        });
+        document.getElementById("doctoralIT").addEventListener("click", function() {
+            togglePrograms("doctoralIT");
+        });
+        document.getElementById("masterIT").addEventListener("click", function() {
+            togglePrograms("masterIT");
+        });
+        document.getElementById("doctoralLiberalArts").addEventListener("click", function() {
+            togglePrograms("doctoralLiberalArts");
+        });
+        document.getElementById("graduateEngineering").addEventListener("click", function() {
+            togglePrograms("graduateEngineering");
+        });
+        document.getElementById("graduateEconomics").addEventListener("click", function() {
+            togglePrograms("graduateEconomics");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Department Structure</title>
+    <style>
+        body {
+            background-image: url("bg6.jpg");
+            background-size: cover;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for better readability */
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .department-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            max-width: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 department-member">
+                <img src="ar.jpg" alt="Department Chair" class="profile-pic">
+                <div class="name">Prof. Dr. Argel Bandala</div>
+                <div>Department Chair</div>
+            </div>
+            <div class="col-md-3 department-member">
+                <img src="ar2.jpg" alt="CPE Coordinator" class="profile-pic">
+                <div class="name">Engr. Armie Pakzad</div>
+                <div>CPE Coordinator</div>
+            </div>
+            <div class="col-md-3 department-member">
+                <img src="an.jpg" alt="Vice Chair" class="profile-pic">
+                <div class="name">Engr. Ana Antoniette Illahi</div>
+                <div>Vice Chair</div>
+            </div>
+            <div class="col-md-3 department-member">
+                <img src="ma.png" alt="Department Secretary" class="profile-pic">
+                <div class="name">Ms. Ma. Rowena Alo</div>
+                <div>Department Secretary</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

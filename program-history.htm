@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program History</title>
+    <style>
+        /* Center the content and set the font */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Times New Roman', cursive;
+            font-size: 24px;
+            color: black; /* Set font color to black */
+            background-image: url('1.jpg'); /* Set initial background image */
+            background-size: cover;
+        }
+
+        /* Add styles for the message text */
+        .message {
+            text-align: center;
+            background-color: white; /* Set background color to white */
+            padding: 20px; /* Add padding to create a white box */
+            border-radius: 10px; /* Add rounded corners to the box */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the box */
+        }
+    </style>
+</head>
+<body>
+    <div class="message" id="program-history-text">
+        <p>The Electronics Engineering degree program produces engineers with greater depth and breadth of knowledge of electronics particularly in preparation for the following fields: telecommunications, radio and TV broadcasting and other communications engineering technologies, industrial electronics and instrumentation, semiconductor applications and manufacture, systems analysis and controls engineering, and the software and hardware areas of computer science and engineering.</p>
+        <p>The ECE Department offers elective courses that will initiate graduates into the more recent areas of digital signal processing; neural networks and fuzzy logic; VLSI technology and linear and nonlinear control theory; and fiber optics communications and digital communications.</p>
+    </div>
+
+    <!-- Link Bootstrap JS and custom script (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Background image array
+        const bgImages = ['1.jpg', '2.jpg', '3.jpg'];
+        let currentIndex = 0;
+
+        // Function to change the background image every three seconds
+        function changeBackground() {
+            document.body.style.backgroundImage = `url(${bgImages[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % bgImages.length;
+        }
+
+        // Call the function initially
+        changeBackground();
+
+        // Set interval to change background every three seconds
+        setInterval(changeBackground, 3000);
+    </script>
+</body>
+</html>

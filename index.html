@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De La Salle University</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Set background color for the body */
+        body {
+            background-color: green;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the content in the frames */
+        .frame-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-family: 'Lucida Handwriting', cursive; /* Use cursive font */
+            font-size: 20px;
+            color: black; /* Set font color to black */
+        }
+
+        /* Style the left sidebar */
+        .sidebar {
+            background-color: green;
+            padding: 15px;
+            height: 100%;
+            color: white;
+            overflow-y: auto;
+        }
+
+        /* Style the links in the left sidebar */
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+			font-size: 30px;
+        }
+
+        /* Style the links when hovered */
+        .sidebar a:hover {
+            background-color: #3a7cd5;
+        }
+
+        /* Center the logo */
+        header {
+            text-align: center;
+            background-image: url('bg.jpg'); /* Set background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 15px;
+        }
+
+        /* Set background color for the main content area */
+        #main-content {
+            background-color: green; /* Set background color to green ) */
+            padding: 15px;
+            margin-right: 1inch; /* Add an inch margin on the right side */
+        }
+
+        /* Set styles for the white box and cursive font */
+        .white-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Lucida Handwriting', cursive; /* Use cursive font */
+            color: black; /* Set font color to black */
+        }
+
+        /* Add styles for the sidebar links and box */
+        .sidebar-nav {
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Set link color in the sidebar */
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Set link color on hover */
+        .sidebar a:hover {
+            color: black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="height: 100vh;">
+        <div class="row" style="height: 35%;">
+            <!-- Header with the logo -->
+            <header class="col-12">
+                <!-- Add your logo here -->
+                <img id="logo" src="dlsulogo.gif" alt="Logo" style="display: block; margin: 0 auto;">
+            </header>
+        </div>
+        <div class="row" style="height: 65%;">
+            <!-- Left Sidebar -->
+            <aside class="col-md-3 sidebar">
+                <div class="sidebar-nav">
+    <!-- Add your menu links here -->
+    <a class="nav-link" href="home.htm" target="winmain">Home</a>
+    <a class="nav-link" href="vision.htm" target="winmain">Vision</a>
+    <a class="nav-link" href="mission.htm" target="winmain">Mission</a>
+    <a class="nav-link" href="program-history.htm" target="winmain">Program History</a>
+    <a class="nav-link" href="elga.htm" target="winmain">Expected Lasallian Graduate Attributes (ELGA)</a>
+    <a class="nav-link" href="peo.htm" target="winmain">Program Educational Objectives (PEO)</a>
+    <a class="nav-link" href="so.htm" target="winmain">Student Outcomes (SO)</a>
+    <a class="nav-link" href="curriculum-map.htm" target="winmain">Curriculum Map</a>
+    <a class="nav-link" href="recognitions.htm" target="winmain">Recognitions, Accreditations and Assessments</a>
+    <a class="nav-link" href="degree-programs.htm" target="winmain">Degree Programs</a>
+    <ul class="nav flex-column" style="padding-left: 15px;">
+        <li class="nav-item">
+            <a class="nav-link" href="undergraduate-programs.htm" target="winmain">Undergraduate Programs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="graduate-programs.htm" target="winmain">Graduate Programs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="other-options-specializations.htm" target="winmain">Other Options and Specializations</a>
+        </li>
+    </ul>
+    <a class="nav-link" href="enrollment-graduation.htm" target="winmain">Enrollment and Graduation Statistics</a>
+    <a class="nav-link" href="department-structure.htm" target="winmain">Department Organizational Structure</a>
+    <a class="nav-link" href="faculty-profile.htm" target="winmain">Faculty Profile</a>
+    <a class="nav-link" href="labs-facilities.htm" target="winmain">Laboratory and Facilities</a>
+    <a class="nav-link" href="research-publications.htm" target="winmain">Research and Publications</a>
+    <a class="nav-link" href="community-linkages.htm" target="winmain">Community Engagement and Linkages</a>
+    <a class="nav-link" href="awards-achievements.htm" target="winmain">Awards and Achievements</a>
+    <a class="nav-link" href="thesis-archives.htm" target="winmain">Thesis Archives</a>
+    <a class="nav-link" href="conferences.htm" target="winmain">Conferences</a>
+    <a class="nav-link" href="student-org.htm" target="winmain">Student Organization</a>
+    <a class="nav-link" href="licensure-exam.htm" target="winmain">Licensure Examination (if applicable)</a>
+    <a class="nav-link" href="cpd.htm" target="winmain">Continuing Professional Development</a>
+    <a class="nav-link" href="alumni-advisers.htm" target="winmain">Alumni and Board of Advisers</a>
+    <a class="nav-link" href="forms-policies.htm" target="winmain">Downloadable Forms and Policies</a>
+    <a class="nav-link" href="contact.htm" target="winmain">Contact Us</a>
+</div>
+
+            </aside>
+            <!-- Main Content -->
+            <main class="col-md-9" id="main-content">
+                <!-- Content will be loaded here based on the clicked link -->
+                <iframe src="home.htm" name="winmain" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+            </main>
+        </div>
+    </div>
+
+    <!-- Link Bootstrap JS and custom script (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
